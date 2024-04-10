@@ -74,7 +74,7 @@ function getArgumentsCount(funcs) {
  *
  */
 function getPowerFunction(exponent) {
-  return function (x) {
+  return (x) => {
     return x ** exponent;
   };
 }
@@ -154,7 +154,7 @@ function retry(func, attempts) {
         result = func();
         break;
       } catch (e) {
-        console.log(e);
+        result = null;
       }
     }
     return result;
